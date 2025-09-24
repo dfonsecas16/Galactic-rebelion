@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Galactic Rebellion - Protótipo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { margin:0; background:#000; color:#fff; font-family: Arial, Helvetica, sans-serif; }
+    #gameContainer { width: 100vw; height: 100vh; overflow: hidden; display:flex; align-items:center; justify-content:center; }
+    canvas { image-rendering: pixelated; }
+    #hud { position: fixed; left: 10px; top: 10px; z-index: 10; }
+    #hud .info { margin-bottom:6px; }
+    #footer { position: fixed; right: 10px; bottom: 10px; color:#ccc; font-size:12px; }
+  </style>
+</head>
+<body>
+  <div id="gameContainer"></div>
+  <div id="hud">
+    <div class="info" id="hp">HP: 100</div>
+    <div class="info" id="score">Pontos: 0</div>
+    <div class="info" id="power">Power: 100</div>
+  </div>
+  <div id="footer">Controles: WASD/Setas mover • Mouse mirar • Clique esquerdo atirar • E sabre • Q empurrão</div>
+
+  <!-- Phaser 3 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
